@@ -1,8 +1,10 @@
 function findMinimumTollCost(array) {
     let tolls = [];
     let skip = 0;
+    
+    tolls.push(array[0]);
 
-    for (let i = 0; i < array.length; i++) {
+    for (let i = 1; i < array.length; i++) {
         if (skip === 1) {
             tolls.push(array[i]);
             skip = 0;
